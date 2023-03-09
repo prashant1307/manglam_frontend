@@ -12,7 +12,7 @@ export const ProductsPage = () => {
 
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getProducts("http://localhost:8080/products?limit=14"))
+        dispatch(getProducts("http://localhost:8080/product?limit=14"))
     }, [])
 
     return (
