@@ -15,6 +15,8 @@ export const ProductsPage = () => {
         dispatch(getProducts("http://localhost:8080/product?limit=14"))
     }, [])
 
+    
+
     return (
 
         <>
