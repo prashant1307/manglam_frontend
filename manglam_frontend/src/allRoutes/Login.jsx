@@ -44,6 +44,12 @@ export const Login=()=>{
             }
         })
     }
+    const handleEnter = e => {
+        //it triggers by pressing the enter key
+      if (e.keyCode === 13) {
+        handleSubmit();
+      }
+    };
     return (
         <>
         <Heading>Login</Heading>
@@ -54,7 +60,7 @@ export const Login=()=>{
                 </FormControl>
                 <FormControl mb={"15px"}>
                     <FormLabel>Enter Password</FormLabel>
-                    <Input name="password" value={creds.password ||""} onChange={handleChange} type='password' />
+                    <Input onKeyDown={handleEnter} name="password" value={creds.password ||""} onChange={handleChange} type='password' />
                 </FormControl>
                 <Button onClick={handleSubmit} w={"100%"} >Login</Button>
             </Box>
