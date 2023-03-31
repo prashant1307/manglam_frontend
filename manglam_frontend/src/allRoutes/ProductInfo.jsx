@@ -13,6 +13,24 @@ useEffect(()=>{
         setData(res)
     })
 },[])
+
+const postProduct=()=>{
+    try {
+        fetch("http://localhost:8080/cart/items",{
+            method:"POST",
+            body:JSON.stringify({"productID":params.id}),
+            headers:{
+                "Content-type": "application/json; charset=UTF-8",
+                "access_token":""
+            }
+        })
+        .then(response=>response.json())
+        .then()
+    } catch (e) {
+        
+    }
+}
+
 return (
     <>
             

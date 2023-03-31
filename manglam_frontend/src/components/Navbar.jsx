@@ -20,6 +20,7 @@ export const Navbar = () => {
                             <MenuItem>  <Link to={"/login"}>Login</Link></MenuItem>
                         </MenuList>
                     </Menu>
+                    <Text><Link to={"/cart"}>Cart</Link></Text>
                 </Flex>
             </Flex>
         </>
